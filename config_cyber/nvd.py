@@ -28,7 +28,6 @@ def fetch_nvd_data():
 
         print("Connection successful!")
         print("Total vulnerabilities available:", data.get("totalResults"))
-
         vulnerabilities = data.get("vulnerabilities", [])
 
         print("\nFetched vulnerability records:", len(vulnerabilities))

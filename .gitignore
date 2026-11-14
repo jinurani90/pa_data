@@ -1,0 +1,8 @@
+#Virtual Environment
+.venv/ 
+
+#API Keys
+.env
+
+#mac file 
+.DS_Store
