@@ -1,0 +1,36 @@
+name: Collect Dublin Bikes data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install collector dependency
+        run: python -m pip install -r requirements-collect.txt
+      - name: Collect a snapshot
+        run: python dublinbikes/collectors/bikes_collect.py
+        env:
+          BIKES_USER_AGENT: ${{ vars.BIKES_USER_AGENT }}
+          AE_USER_AGENT: ${{ vars.AE_USER_AGENT }}
+      - name: Commit collected files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dublinbikes/data/bikes/csv dublinbikes/logs
+          if ! git diff --cached --quiet; then
+            git commit -m "Collect Dublin Bikes snapshot"
+            git push
+          fi
