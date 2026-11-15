@@ -1,5 +1,8 @@
 """Collect Dublin Bikes station status and Dublin weather to daily CSV files."""
 
+
+"""Collect Dublin Bikes station status and Dublin weather to daily CSV files."""
+
 import csv
 import logging
 import os
@@ -9,18 +12,22 @@ from pathlib import Path
 
 import requests
 
-
 BASE_URL = "https://api.cyclocity.fr/contracts/dublin/gbfs/v3"
 STATUS_URL = f"{BASE_URL}/station_status.json"
 INFO_URL = f"{BASE_URL}/station_information.json"
+
 WEATHER_URL = (
     "https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=-6.2603"
     "&current=temperature_2m,relative_humidity_2m,wind_speed_10m,"
     "precipitation,weather_code"
 )
-DATA_DIR = Path("data/bikes/csv")
-LOG_DIR = Path("logs")
+
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+
+DATA_DIR = PROJECT_DIR / "data" / "bikes" / "csv"
+LOG_DIR = PROJECT_DIR / "logs"
 STATE_FILE = DATA_DIR / "last_updated.txt"
+
 USER_AGENT = (
     os.environ.get("BIKES_USER_AGENT")
     or os.environ.get("AE_USER_AGENT")
@@ -37,10 +44,14 @@ COLUMNS = [
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 LOG_DIR.mkdir(parents=True, exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s",
-    handlers=[logging.StreamHandler(), logging.FileHandler(LOG_DIR / "collect_bikes.log")],
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(LOG_DIR / "collect_bikes.log"),
+    ],
 )
 
 
