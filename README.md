@@ -1,12 +1,24 @@
 ### #3.Predict which Dublin Bikes stations will have 2 or fewer bicycles available within the next 60 minutes, to help prioritise bicycle redistribution?
 
- -identify potential bicycle shortages in advance, allowing operators to prioritise stations for rebalancing vans.
- Data Source : Official DublinBikes GBFS API,Open-Meteo Weather API
- 
+-identify potential bicycle shortages in advance, allowing operators to prioritise stations for rebalancing vans.
+##### Data Source : Official DublinBikes GBFS API,Open-Meteo Weather API,Smart Dublin Open Data (historical Data)
+
+The system aims to answer:
+
+  - Which stations are likely to become nearly empty?
+  
+  - Which stations may need attention within the next 60 minutes?
+  
+  - Can weather conditions and historical usage patterns improve prediction performance?
+  
+  - Can these predictions help prioritise bicycle redistribution vans?
+
 #### Current progress:
-1. Bicycle availability data: Started fetching live bicycle availability data for approximately 115 DublinBikes stations Dublin, using the official GBFS API.
-2. Weather data: Also fetching weather information using the Open-Meteo API to investigate whether weather conditions may influence bicycle availability.
-3. Data storage: Started storing timestamped data snapshots in CSV files for subsequent data cleaning, analysis and  learning.
+  - Started fetching live bicycle availability data for approximately 115 DublinBikes stations across the network using the official GBFS API.
+
+  - Started collecting weather information through the Open-Meteo API, using central Dublin as the weather reference location.
+
+  - Started storing timestamped bicycle availability snapshots and corresponding weather information in CSV files.
 #### Next Action Plan
 ##### 1. Validate and Prepare CSV Data
    - Check for missing values, duplicate records and incorrect timestamps.
