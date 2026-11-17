@@ -1,5 +1,8 @@
 ### #3.Predict which Dublin Bikes stations will have 2 or fewer bicycles available within the next 60 minutes, to help prioritise bicycle redistribution?
+
  -identify potential bicycle shortages in advance, allowing operators to prioritise stations for rebalancing vans.
+ Data Source : Official DublinBikes GBFS API,Open-Meteo Weather API
+ 
 #### Current progress:
 1. Bicycle availability data: Started fetching live bicycle availability data for approximately 115 DublinBikes stations Dublin, using the official GBFS API.
 2. Weather data: Also fetching weather information using the Open-Meteo API to investigate whether weather conditions may influence bicycle availability.
@@ -18,31 +21,31 @@
 ##### 3. Perform Exploratory Data Analysis (EDA)
 
 ###### A. Bicycle availability by station
-     - Analyse bicycle availability across individual stations.
-     - Compare stations based on average and minimum bicycle availability.
-     - Identify stations with consistently high or low availability.
+   - Analyse bicycle availability across individual stations.
+   - Compare stations based on average and minimum bicycle availability.
+   - Identify stations with consistently high or low availability.
 ###### B. Hourly, daily and weekend patterns
-     - Analyse bicycle availability by hour of the day.
-     - Compare weekday and weekend patterns.
-     - Identify peak and low-availability periods.
+   - Analyse bicycle availability by hour of the day.
+   - Compare weekday and weekend patterns.
+   - Identify peak and low-availability periods.
  ###### C. Frequent near-empty conditions
-     - Identify stations that frequently have 2 or fewer bicycles.
-     - Calculate the frequency and percentage of near-empty observations.
-     - Rank stations based on their near-empty frequency.
+   - Identify stations that frequently have 2 or fewer bicycles.
+   - Calculate the frequency and percentage of near-empty observations.
+   - Rank stations based on their near-empty frequency.
 ###### D. Weather and bicycle availability
-     - Explore relationships between temperature and bicycle availability.
-     - Analyse the impact of rainfall and wind speed.
-     - Compare bicycle availability under different weather conditions.
-     - Investigate whether weather patterns are associated with changes in bicycle availability.
-     
+   - Explore relationships between temperature and bicycle availability.
+   - Analyse the impact of rainfall and wind speed.
+   - Compare bicycle availability under different weather conditions.
+   - Investigate whether weather patterns are associated with changes in bicycle availability.
+   
 ##### 4. Prepare EDA Outputs
 
-       - Generate descriptive statistics and visualisations.
-       - Create station-level comparison charts.
-       - Produce hourly and weekday/weekend charts.
-       - Visualise near-empty station frequency.
-       - Present weather-related analysis.
-       - Document the key findings and observations
+   - Generate descriptive statistics and visualisations.
+   - Create station-level comparison charts.
+   - Produce hourly and weekday/weekend charts.
+   - Visualise near-empty station frequency.
+   - Present weather-related analysis.
+   - Document the key findings and observations
 
 ### #2.YouTube Trending Project: Collect, Study, Show
 1. Which kinds of videos (music, gaming and so on) are popular in Ireland compared with the UK and the US?
