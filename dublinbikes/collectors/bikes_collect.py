@@ -1,8 +1,5 @@
 """Collect Dublin Bikes station status and Dublin weather to daily CSV files."""
 
-
-"""Collect Dublin Bikes station status and Dublin weather to daily CSV files."""
-
 import csv
 import logging
 import os
