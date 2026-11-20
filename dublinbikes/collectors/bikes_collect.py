@@ -55,13 +55,13 @@ logging.basicConfig(
 )
 
 
-def get_json(url: str, retries: int = 3) -> dict:
+def get_json(url: str, retries: int = 1) -> dict:
     """Fetch JSON with retries and an identifying User-Agent."""
     delay = 5
     for attempt in range(1, retries + 1):
         try:
             response = requests.get(
-                url, timeout=30, headers={"User-Agent": USER_AGENT}
+                url, timeout=10, headers={"User-Agent": USER_AGENT}
             )
             response.raise_for_status()
             return response.json()
