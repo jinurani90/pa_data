@@ -1,4 +1,4 @@
-"""Collect Dublin Bikes station status and Dublin weather to daily CSV files."""
+"""eCollect Dublin Bikes station status and Dublin weather to daily CSV files."""
 
 import csv
 import logging
@@ -52,13 +52,13 @@ logging.basicConfig(
 )
 
 
-def get_json(url: str, retries: int = 1) -> dict:
+def get_json(url: str, retries: int = 3, timeout: int = 15) -> dict:
     """Fetch JSON with retries and an identifying User-Agent."""
     delay = 5
     for attempt in range(1, retries + 1):
         try:
             response = requests.get(
-                url, timeout=10, headers={"User-Agent": USER_AGENT}
+                url, timeout=timeout, headers={"User-Agent": USER_AGENT}
             )
             response.raise_for_status()
             return response.json()
@@ -76,7 +76,7 @@ def save_stations() -> None:
     path = DATA_DIR / "stations.csv"
     if path.exists():
         return
-    stations = get_json(INFO_URL)["data"]["stations"]
+    stations = get_json(INFO_URL, retries=3, timeout=15)["data"]["stations"]
     with path.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.writer(stream)
         writer.writerow(["station_id", "name", "address", "lat", "lon", "capacity"])
@@ -92,14 +92,14 @@ def save_stations() -> None:
 
 
 def collect_once() -> int:
-    status = get_json(STATUS_URL)
+    status = get_json(STATUS_URL, retries=3, timeout=15)
     feed_time = status["last_updated"]
     if STATE_FILE.exists() and STATE_FILE.read_text(encoding="utf-8").strip() == str(feed_time):
         logging.info("Feed has not changed since %s; skipping", feed_time)
         return 0
 
     try:
-        weather = get_json(WEATHER_URL).get("current", {})
+        weather = get_json(WEATHER_URL, retries=1, timeout=10).get("current", {})
     except requests.RequestException as exc:
         logging.error("Weather request failed; saving bike data without weather: %s", exc)
         weather = {}
