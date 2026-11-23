@@ -4,7 +4,7 @@ Run:  python analysis/check_collection.py
 """
 import pandas as pd
 
-from load_data import load_status
+from dublinbikes.analysis.load_data import load_status
 
 df = load_status()
 snap = df.drop_duplicates("collected_at")[["collected_at", "temperature"]].sort_values("collected_at")
