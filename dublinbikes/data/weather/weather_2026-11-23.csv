@@ -1,0 +1,2 @@
+fetched_at,status,weather_time,temperature,humidity,wind_speed,precipitation,weather_code,error
+2026-11-23T15:09:24Z,ok,2026-11-23T15:00,10.1,80,19.1,0.0,3,
