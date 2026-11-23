@@ -1,5 +1,4 @@
 collected_at,feed_last_updated,station_id,num_bikes,mechanical,electrical,num_bikes_disabled,num_docks_available,num_docks_disabled,is_installed,is_renting,is_returning,last_reported,temperature,humidity,wind_speed,precipitation,weather_code
-collected_at,feed_last_updated,station_id,num_bikes,mechanical,electrical,num_bikes_disabled,num_docks_available,num_docks_disabled,is_installed,is_renting,is_returning,last_reported,temperature,humidity,wind_speed,precipitation,weather_code
 2026-11-20T00:01:10Z,2026-11-20T00:01:02.339Z,1,5,5,0,0,26,0,True,True,True,2026-11-19T03:03:23Z,9.3,75,13.0,0.0,3
 2026-11-20T00:01:10Z,2026-11-20T00:01:02.339Z,2,4,2,2,0,15,0,True,True,True,2026-11-19T03:03:22Z,9.3,75,13.0,0.0,3
 2026-11-20T00:01:10Z,2026-11-20T00:01:02.339Z,3,7,5,2,0,13,0,True,True,True,2026-11-19T03:05:11Z,9.3,75,13.0,0.0,3
