@@ -18,7 +18,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
-from load_data import ROOT
+from dublinbikes.analysis.load_data import ROOT
 
 TARGET = "near_empty_60m"
 FEATURES = ["fill_ratio", "capacity", "delta_bikes_15m", "delta_bikes_60m", "changes_per_hour",

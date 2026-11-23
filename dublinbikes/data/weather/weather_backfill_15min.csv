@@ -857,3 +857,6 @@ slot_utc,temperature,humidity,wind_speed,precipitation,weather_code,source,downl
 2026-11-23T21:45:00Z,10.4,95,15.1,0.1,51,open-meteo forecast API minutely_15 (backfill),2026-11-23T22:29:17Z
 2026-11-23T22:00:00Z,10.4,95,14.8,0.1,51,open-meteo forecast API minutely_15 (backfill),2026-11-23T22:29:17Z
 2026-11-23T22:15:00Z,10.5,95,14.4,0.0,3,open-meteo forecast API minutely_15 (backfill),2026-11-23T22:29:17Z
+2026-11-23T22:30:00Z,10.4,95,14.8,0.1,51,open-meteo forecast API minutely_15 (backfill),2026-11-23T23:03:48Z
+2026-11-23T22:45:00Z,10.5,95,14.0,0.1,51,open-meteo forecast API minutely_15 (backfill),2026-11-23T23:03:48Z
+2026-11-23T23:00:00Z,10.6,95,13.7,0.1,51,open-meteo forecast API minutely_15 (backfill),2026-11-23T23:03:48Z
