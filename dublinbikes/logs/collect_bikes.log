@@ -4629,3 +4629,4 @@
 2026-11-24 23:12:39,914 ERROR Weather request failed: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=-6.2603&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code
 2026-11-24 23:12:39,915 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-24.csv (weather time 2026-11-24T22:45)
 2026-11-24 23:15:38,389 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-24.csv (weather time 2026-11-24T23:15)
+2026-11-24 23:18:26,334 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-24.csv (weather time 2026-11-24T23:15)
