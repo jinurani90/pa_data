@@ -32,7 +32,7 @@ def future_target(t, bikes, ok, max_gap_min=20):
     """near_empty_60m = 1 if the station has <= 2 bikes at ANY reading in (t, t+60 min].
     No label (NaN) if the window is not covered (no reading 54-66 min ahead, a gap over
     20 minutes inside it) or the station is out of service at any reading in it."""
-    ts = t.astype("int64").to_numpy() // 10**9
+    ts = (t - pd.Timestamp("1970-01-01", tz="UTC")).dt.total_seconds().to_numpy().astype("int64")
     n = len(ts)
     out = np.full(n, np.nan)
     for i in range(n):
