@@ -4658,3 +4658,4 @@
 2026-11-25 00:31:36,030 ERROR Weather request failed: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=20)
 2026-11-25 00:31:36,031 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T00:15)
 2026-11-25 00:33:38,760 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T00:30)
+2026-11-25 00:36:27,437 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T00:30)
