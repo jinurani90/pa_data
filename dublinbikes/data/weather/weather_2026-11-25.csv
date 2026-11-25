@@ -36,3 +36,4 @@ fetched_at,status,weather_time,temperature,humidity,wind_speed,precipitation,wea
 2026-11-25T07:36:38Z,ok,2026-11-25T07:30,7.7,95,6.8,0.1,51,
 2026-11-25T07:51:27Z,error,,,,,,,"HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=20)"
 2026-11-25T07:54:27Z,ok,2026-11-25T07:45,7.7,94,6.8,0.1,51,
+2026-11-25T08:09:28Z,error,,,,,,,"429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=-6.2603&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_"
