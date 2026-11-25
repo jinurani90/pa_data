@@ -1,4 +1,4 @@
-"""Feature engineering: raw snapshots -> one feature table (Paul's points 2 and 3).
+"""Feature engineering: raw snapshots -> one feature table 
 
 Every feature at time t uses only readings at or before t (same station, sorted by time).
 Only the two TARGET columns look forward, and they are never model inputs.
