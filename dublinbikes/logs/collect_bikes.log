@@ -4746,3 +4746,4 @@
 2026-11-25 04:12:24,765 INFO Feed has not changed since 2026-11-25T04:06:24.904Z; skipping
 2026-11-25 04:15:53,547 WARNING Attempt 1 failed for https://api.cyclocity.fr/contracts/dublin/gbfs/v3/station_status.json: HTTPSConnectionPool(host='api.cyclocity.fr', port=443): Read timed out. (read timeout=15)
 2026-11-25 04:15:59,043 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T04:15)
+2026-11-25 04:18:26,017 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T04:15)
