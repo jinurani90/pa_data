@@ -4754,3 +4754,4 @@
 2026-11-25 04:33:23,631 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T04:30)
 2026-11-25 04:36:24,959 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T04:30)
 2026-11-25 04:39:22,261 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T04:30)
+2026-11-25 04:42:25,368 INFO Feed has not changed since 2026-11-25T04:36:48.026Z; skipping
