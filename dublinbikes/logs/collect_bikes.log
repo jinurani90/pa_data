@@ -4775,3 +4775,4 @@
 2026-11-25 05:33:57,706 WARNING Attempt 2 failed for https://api.cyclocity.fr/contracts/dublin/gbfs/v3/station_status.json: HTTPSConnectionPool(host='api.cyclocity.fr', port=443): Read timed out. (read timeout=15)
 2026-11-25 05:34:08,220 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T05:30)
 2026-11-25 05:36:32,116 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T05:30)
+2026-11-25 05:39:21,680 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-25.csv (weather time 2026-11-25T05:30)
