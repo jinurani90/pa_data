@@ -1,6 +1,6 @@
 """60-minute near-empty model and the dispatch comparison (the research question).
 
-Exactly 10 feature columns (Paul's 5-10 rule). Split by DATE: first 60% of dates train,
+Exactly 10 feature columns Split by DATE: first 60% of dates train,
 next 20% validation, last 20% test. Never shuffled. Threshold chosen on validation only.
 By default only 3-minute data (from 2026-11-18) is used, so every row has the same detail;
 the older 15-minute rows stay in the files and are used for EDA and the baseline.
@@ -18,7 +18,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
-from dublinbikes.analysis.load_data import ROOT
+from load_data import ROOT
 
 TARGET = "near_empty_60m"
 FEATURES = ["fill_ratio", "capacity", "delta_bikes_15m", "delta_bikes_60m", "changes_per_hour",
