@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-26T11:51:26Z",
- "weather_time": "2026-11-26T11:45",
- "temperature": 7.4,
- "humidity": 74,
- "wind_speed": 13.7,
+ "fetched_at": "2026-11-26T12:06:28Z",
+ "weather_time": "2026-11-26T12:00",
+ "temperature": 7.6,
+ "humidity": 75,
+ "wind_speed": 14.0,
  "precipitation": 0.0,
  "weather_code": 3
 }
