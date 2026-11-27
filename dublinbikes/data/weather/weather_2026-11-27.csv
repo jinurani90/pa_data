@@ -93,3 +93,4 @@ fetched_at,status,weather_time,temperature,humidity,wind_speed,precipitation,wea
 2026-11-27T21:39:24Z,ok,2026-11-27T21:30,5.8,87,1.1,0.0,3,
 2026-11-27T21:54:26Z,ok,2026-11-27T21:45,5.8,87,0.7,0.0,3,
 2026-11-27T22:09:23Z,ok,2026-11-27T22:00,5.8,87,0.7,0.0,3,
+2026-11-27T22:24:35Z,error,,,,,,,"429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=-6.2603&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_"
