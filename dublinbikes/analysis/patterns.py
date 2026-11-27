@@ -1,4 +1,4 @@
-"""Customer activity versus likely redistribution (Paul's points 4 and 5).
+"""Customer activity versus likely redistribution 
 
 There is NO ground truth: the feed never says when a van came. These are rule-based
 labels ("likely redistribution"). Only 3-minute steps (from 18 Nov 2026) are labelled;
