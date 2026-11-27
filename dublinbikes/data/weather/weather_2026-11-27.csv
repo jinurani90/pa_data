@@ -18,3 +18,4 @@ fetched_at,status,weather_time,temperature,humidity,wind_speed,precipitation,wea
 2026-11-27T03:51:34Z,ok,2026-11-27T03:45,8.8,90,10.1,0.0,3,
 2026-11-27T04:06:39Z,ok,2026-11-27T04:00,8.8,89,10.4,0.0,3,
 2026-11-27T04:21:34Z,ok,2026-11-27T04:15,8.8,89,10.4,0.0,3,
+2026-11-27T04:36:42Z,error,,,,,,,"HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=20)"
