@@ -1,0 +1,13 @@
+Measure,Value
+Rows after cleaning,410111
+Stations,113
+Busiest hour (Dublin time),8:00
+Activity at busiest hour (bikes/hour),8.49
+Weekday activity at 08:00 (bikes/hour),10.68
+Weekend activity at 08:00 (bikes/hour),1.21
+Busiest station (ID),69
+Bikes moved at busiest station,2130
+Activity when raining (bikes/hour),3.21
+Activity when not raining (bikes/hour),3.92
+Readings with no change (%),83.0
+Possible redistribution (%),0.3
