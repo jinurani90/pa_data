@@ -52,3 +52,28 @@ print(df.isna().sum())
 
 print("Rows after cleaning:", len(df))
 print("Stations:", df["station_id"].nunique())
+
+# ---------- STEP 3: FILL MISSING WEATHER ----------
+print("\nFilling missing weather...")
+weather_file= os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "weather", "weather_backfill_15min.csv")
+weather = pd.read_csv(weather_file)
+weather["slot_utc"] = pd.to_datetime(weather["slot_utc"], utc=True)
+
+weather_cols = ["temperature", "humidity", "wind_speed", "precipitation", "weather_code"]
+weather = weather[["slot_utc"] + weather_cols]
+
+# Round each bike reading down to its 15-minute slot, e.g. 08:07 becomes 08:00
+df["slot_utc"] = df["collected_at"].dt.floor("15min")
+
+print("Missing temperature before:", df["temperature"].isna().sum())
+
+# Join the backfill on to the bike data by slot
+df = df.merge(weather, on="slot_utc", how="left", suffixes=("", "_backfill"))
+
+# Fill only the empty cells, then drop the helper columns
+for col in weather_cols:
+    df[col] = df[col].fillna(df[col + "_backfill"])
+    df = df.drop(columns=[col + "_backfill"])
+
+print("Missing temperature after:", df["temperature"].isna().sum())
+print("Rows:", len(df))
