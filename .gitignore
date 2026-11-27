@@ -1,0 +1,21 @@
+
+# Python and environment
+.venv/
+__pycache__/
+*.pyc
+
+# Mac system files
+.DS_Store
+
+# Large files the script can rebuild
+clean_data.csv
+
+# Editor settings
+.vscode/
+.idea/
+
+.DS_Store
+__pycache__/
+.venv/
+clean_data.csv
+dublinbikes.db
