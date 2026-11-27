@@ -25,6 +25,14 @@ The system aims to answer:
    - Validate weather records and timestamp alignment.
    - Combine daily CSV files into a clean dataset.
    - Prepare the data for SQLite import.
+   ## Method
+1. Loaded all daily CSVs and combined them.
+2. Removed duplicates and rows where a station was not installed or not renting. Stations stop renting overnight (about 00:30–05:00), so those rows don't show real usage.
+3. Filled missing weather by matching each reading to its 15-minute weather slot.
+4. Calculated `bike_change` for each station from its previous reading, using the real minutes between readings, and dropped gaps over 30 minutes.
+5. Labelled each change as no change, net increase, net decrease, or possible redistribution (a change of 5 or more bikes, an exploratory threshold).
+6. Compared activity by hour, weekday versus weekend, station, and rain.
+
 ##### 2. Build the SQLite Database
     - Create an SQLite database to store the collected data.
     - Import the cleaned CSV data.
