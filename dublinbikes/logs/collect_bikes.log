@@ -6351,3 +6351,7 @@
 2026-11-28 07:57:26,769 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-28.csv (weather time 2026-11-28T07:45)
 2026-11-28 08:01:01,814 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-28.csv (weather time 2026-11-28T07:45)
 2026-11-28 08:03:30,411 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-28.csv (weather time 2026-11-28T07:45)
+2026-11-28 08:06:47,476 WARNING Attempt 1 failed for https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=-6.2603&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=20)
+2026-11-28 08:07:12,535 WARNING Attempt 2 failed for https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=-6.2603&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=20)
+2026-11-28 08:07:12,535 ERROR Weather request failed: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=20)
+2026-11-28 08:07:12,536 INFO Saved 114 station rows to /home/runner/work/pa_data/pa_data/dublinbikes/data/bikes/csv/status_2026-11-28.csv (weather time 2026-11-28T07:45)
